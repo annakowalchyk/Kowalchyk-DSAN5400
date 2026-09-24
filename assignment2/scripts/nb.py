@@ -251,6 +251,7 @@ if __name__ == "__main__":
     vocabulary, priors, likelihoods = train_nb(training_df)
     class_predictions = test(test_df, vocabulary, priors, likelihoods)
     acc, f1, conf = get_metrics(test_df, class_predictions)
+    # print(test_df.to_string(index=False))
     # print(conf)
     plot_confusion_matrix(conf, [0, 1])
     plt.savefig("conf.jpg")
