@@ -16,7 +16,7 @@ The two probability estimates are:
 
 The shape of the matrix storing the likelihoods is the (number of classes x number of words (length of the vocabulary)). More specfically it is (2x22961).
 
-When varrying the smoothing hyperparameter to 0, it leads to zero probability error and seems to only guess class = 0. A 0 hyperparemeter can result in overfitting. On the contrary, with a high hyperparameter the model only predicts class = 1 which leads to underfitting. 
+When varrying the smoothing hyperparameter to 0, it leads to zero probability error. This is because unseen words receive a probability of 0. With the hyperparameter set at 0, the model only predicts class = 0 which can result in overfitting. On the contrary, with a high hyperparameter the model only predicts class = 1 which leads to underfitting. 
 
 ### Question F:
 
