@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: naive_bayes
+Version: 0.0.1
+Summary: DSAN5400 Assignment 3
+Author: Anna Kowalchyk
+Author-email: ark170@georgetown.edu
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
