@@ -1,6 +1,9 @@
 ## Naive Bayes Modeling
 This code focuses on careful project organization and importation of code to implement Naive Bayes. The model takes an input of speeches from Johnson, Kennedy and unlabled. Using the Naive Bayes class, the data is loaded and separated by author appropriately. Through a series of prior and liklihood calculations and train/test methods, the code returns a list of 0 or 1 as predictions for the authors of the unlabeled data. In this code, 0 represents Kennedy while 1 represents Johnson. 
 
+### About the Naive Bayes Model
+This Naive Bayes classifier performs authorship identification over some speeches by President Lyndon B. Johnson and President John F. Kennedy 
+
 ### Coding Structure Tree
 assignment3/ 
 nb/ 
@@ -50,6 +53,11 @@ setup.py -> orchestrate the correct installation of the project
 Set up conda environment using the environment.yml file. Must install the utils and nb as package. No extra packages are necessary. 
 
 ### Usage
+Must first install packages using:
+python -m pip install -e .
+
+Then you can continue to the other command lines to run the program.
+
 UNIT TESTS: Navigate to naive_bayes folder and run pytest tests/
 
 MAIN BIN: From naive_bayes folder run
