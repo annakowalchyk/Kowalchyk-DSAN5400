@@ -12,14 +12,14 @@ data = {
 
 df = pd.DataFrame(data)
 
+# Setup
+df = pd.DataFrame(data)
+nb = NaiveBayes(df,1)
+
+# train
+nb.train()
+
 def test_nb_class():
-    df = pd.DataFrame(data)
-    nb = NaiveBayes(df,1)
-
-    # train
-    nb.train()
-
-
     # Actual prior from textbook
     # Check priors
     priors = nb.priors
@@ -29,6 +29,7 @@ def test_nb_class():
     assert priors_0 == 3/5
     assert priors_1 == 2/5
 
+def test_nb_likelihoods():
     # Check likelihoods
     likelihoods = nb.likelihoods
 
@@ -50,6 +51,7 @@ def test_nb_class():
     assert like_fun_0 == (1/34)
     assert like_fun_1 == (2/29)
 
+def test_nb_sum():
     # Sum along the axis is = 1
     for row in nb.likelihoods:
         assert np.sum(row, axis = 0) == 1

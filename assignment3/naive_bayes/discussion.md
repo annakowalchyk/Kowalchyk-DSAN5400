@@ -1,20 +1,20 @@
 DISCUSSION QUESTIONS
 
 ## (A) 
-The solution provided seems to assume that the author is always separated by an underscore and is the last element. This is in comparison to mine which simply checks if the author (kennedy or johnson) exist anywhere in the filepath then assigns accordingly. I think that my way is more robust because it checks the entire filepath rather than making this assumption. The creation of the vocabulary dictionary appears simpler in the final solution by using significantly less nested for loops and instead, creating the dictionary on its assignment. This seems to be a constant trend throughout the comparison and an area I could improve in. I need to work on simplifying my code when appropriate similar to the solution. Regardless, the codes have similarities throughout like with developing the vocabulary, getting n_docs, n_classes and the entire testing method. 
+The solution provided seems to assume that the author is always separated by an underscore and is the last element. This is in comparison to mine which simply checks if the author (kennedy or johnson) exists anywhere in the filepath, then assigns accordingly. I think that my way is more robust because it checks the entire filepath rather than making this assumption. This is an area the solution could improve. The creation of the vocabulary dictionary appears simpler in the final solution by using significantly less nested for loops and instead, creating the dictionary on its assignment. This seems to be a constant trend throughout  and an area I could improve in. I need to work on simplifying my code when appropriate as it becomes more readable. Regardless, the codes have similarities throughout especially when developing the vocabulary, getting n_docs, n_classes and the entire testing method which are nearly identical.
 
 ## (C) PYTEST RESULTS
-** The result displays 1 test passed. The reason it is only 1 test is because the directions state to make a single function test_nb_classes. Pytest will only display 1 pass/failure although it does run every test in the function.
-================================================== test session starts ==================================================
+The result displays 3 test passed. The directions ask for both one function and 3 passing tests. Because 1 function will not display the 3 passed, I decided to create 3 functions to make it align with the directions better.
+========================================================================================================= test session starts ==========================================================================================================
 platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
 rootdir: /home/akowala/DSAN5400/Kowalchyk-DSAN5400/assignment3/naive_bayes
 configfile: pytest.ini
 plugins: anyio-4.14.2
-collected 1 item                                                                                                        
+collected 3 items                                                                                                                                                                                                                      
 
-tests/test_naive_bayes.py .                                                                                       [100%]
+tests/test_naive_bayes.py ...                                                                                                                                                                                                    [100%]
 
-=================================================== 1 passed in 0.50s ===================================================
+========================================================================================================== 3 passed in 0.28s ===========================================================================================================
 
 ## (E) RESULTS FOR SYSTEM
 
