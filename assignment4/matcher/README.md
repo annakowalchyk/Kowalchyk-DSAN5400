@@ -1,5 +1,5 @@
 ## Name Matching
-This code completes the task of Fizzy Name Matching using various algorithms to produce a score ranging from 0 to 1 describing similarity of two names. Exact matches receive a score of 1 while no matching characteristics receive a score of 0. Exact Match, Jaccard Similarity, Levenshtein, Cosine Similarity and Jaro-Winkler algorithms are all evaluated and compared using precision, recall and accuracy. Thresholds are determined based on the intersection of precision and recall to balance the tradeoff. 
+This code completes the task of Fuzzy Name Matching using various algorithms to produce a score ranging from 0 to 1 describing similarity of two names. Exact matches receive a score of 1 while no matching characteristics receive a score of 0. Exact Match, Jaccard Similarity, Levenshtein, Cosine Similarity and Jaro-Winkler algorithms are all evaluated and compared using precision, recall and accuracy. Thresholds are determined based on the intersection of precision and recall to balance the tradeoff. 
 
 ### Coding Structure Tree
 matcher/ 
@@ -56,7 +56,12 @@ Set up conda environment using the environment.yml file.
 
 ### Usage
 Run from the root directory of the project. Use this command: 
-python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t <0.5> -e --plot -p
+
+For plotting
+python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 --plot -p
+
+For evaluating
+python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 -e -p
 
 **Flags**
 -f, --file Path to the TSV dataset containing name pairs. Required.
@@ -107,8 +112,9 @@ python -m matcher.bin.main -f data/annotated-index-test.tsv -s jaccard -p -e
 Generates a TSV file containing the names, scores and true match. Results are saved to data/results_<scoring_algorithm>.tsv
 
 UNIT TESTS: Navigate to matcher folder and run the following command:
-python -m pytest -v
+pytest
 
+*Note that you can not plot with exact because it is not used to choose an optimal threshold*
 
 ### License
 Using Visual Studio Code operated on WSL:Ubuntu. 

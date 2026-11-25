@@ -154,6 +154,7 @@ if __name__ == "__main__":
     elif args.parallel:
         start_time = time.time()  # Record start time
         threshold = args.threshold
+        logger.info(f"Starting {model.__name__} scoring")
         # Read file
         with open(args.file, newline="", encoding="utf-8") as file:
             rows = csv.reader(file, delimiter='\t')
@@ -163,6 +164,7 @@ if __name__ == "__main__":
             results = pool.starmap(parallel, pool_args)
         save_results(results, f"data/results_{args.scoring}.tsv")
         results = pd.read_csv(f"data/results_{args.scoring}.tsv", sep="\t")
+        logger.info(f"{model.__name__} scoring has finished")
         results["predicted"] = (results["score"] >= threshold).astype(int)
         end_time = time.time()    # Record end time
         print(f"Parallel execution time: {end_time - start_time} seconds")

@@ -1,8 +1,9 @@
 |                               |               |            |         |
 |-------------------------------|---------------|------------|---------|
 |                               | **Precision** | **Recall** | **F-1** |
-| **Exact Match**               | 1.0           | 0.1037     | 0.1879  |
+| **Exact Match**               | 1.0           | 0.25       | 0.40    |
 | **Jaccard Similarity (0.50)** | 0.0061        | 0.80       | 0.0121  |
+| **Jaccard Similarity (0.72)** | 0.2174        | 0.625      | 0.3226  |
 | **Levenshtein (0.68)**        | 0.5385        | 0.875      | 0.6667  |
 | **Cosine Similarity (0.57)**  | 0.24          | 0.75       | 0.3636  |
 | **Jaro-Winkler (0.87)**       | 0.3636        | 0.50       | 0.4211  |
@@ -11,7 +12,7 @@ This project tackled the reduced problem by sampling 10% of the data from the tr
 
 \(D\)
 
-If we changed the threshold, we would likely see a tradeoff between precision and recall. A threshold of 1 means that the model must be 100% certain it is the same. Therefore, precision becomes 1 but recall is likely to be closer to 0. A threshold of 0.01 is essentially passing almost everything as similar meaning recall will be 1 but precision is near 0.
+If we changed the threshold, we would likely see a tradeoff between precision and recall. A threshold of 1 means that the two names must receive the highest score of similarity. Therefore, precision is likely to increase (and in this case reach 1) while recall is likely to decrease towards 0. A threshold of 0.01 is essentially passing almost every name pairing as a match. This increases recall towards 1 but precision towards 0.
 
 \(E\)
 
@@ -33,7 +34,11 @@ Selecting 0.68 as threshold because that is approximately where precision, recal
 
 ![](images/paste-4.png)
 
-\(G\) Threshold = 0.57
+\(G\)
+
+a\. Using n-grams can help identify extremely similar words that might have a single letter difference or missing a letter. For example, my last name Kowalchyk would be similar to Kowalcyk but an exact match system would say otherwise. However, when using n-gram it breaks the entire name into n-grams that are then compared making related tokens noticeable.
+
+e\. Threshold = 0.57 as that is where precision, recall and f1 score approximately intersect.
 
 ![](images/paste-1.png)
 
