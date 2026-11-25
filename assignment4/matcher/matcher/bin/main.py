@@ -153,7 +153,7 @@ if __name__ == "__main__":
     if args.plot and model != ExactMatch:
         check_threshold(model)
 
-    elif args.parallel:
+    if args.parallel:
         start_time = time.time()  # Record start time
         threshold = args.threshold
         logger.info(f"Starting {model.__name__} scoring")

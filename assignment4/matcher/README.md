@@ -35,7 +35,7 @@ matcher/
     environment.yml
 
 ### File Information
-data -> raw data downloaded from the assignment folder, additional files inclue the train and test sets
+data -> raw data downloaded from the assignment folder, additional files include the train and test sets
 matcher -> Subfolder
 main.py -> Main script to run
 old_main.py -> Old script before main was restructured to better interface
@@ -58,7 +58,7 @@ Set up conda environment using the environment.yml file.
 Run from the root directory of the project. Use this command: 
 
 For plotting
-python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 --plot -p
+python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 --plot
 
 For evaluating
 python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 -e -p
