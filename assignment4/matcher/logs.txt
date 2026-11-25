@@ -1,0 +1,6 @@
+Split data into training and test sets
+10000 Pairs Processed
+20000 Pairs Processed
+30000 Pairs Processed
+40000 Pairs Processed
+50000 Pairs Processed
