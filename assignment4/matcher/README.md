@@ -66,6 +66,7 @@ For evaluating
 python -m matcher.bin.main -f <dataset_path> -s <scoring_algorithm> -t 0.5 -e -p
 
 **Flags**
+
 -f, --file Path to the TSV dataset containing name pairs. Required.
 
 -s, --scoring Select the scoring algorithm. Required.
