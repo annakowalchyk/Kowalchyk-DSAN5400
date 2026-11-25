@@ -121,9 +121,11 @@ if __name__ == "__main__":
     logger = logging.getLogger("NameMatcher")
     logger.setLevel(logging.DEBUG)
 
+    # Log file handling
     file_handler = logging.FileHandler("logs.txt", mode = "w")
     logger.addHandler(file_handler)
 
+    # Match the input with correct model
     models = {
     "exact": ExactMatch,
     "jaccard": Jaccard,
@@ -139,7 +141,7 @@ if __name__ == "__main__":
     # Split the data
     split_save_data()
 
-
+    # Reuse vectorizer for tfidf
     if model == Tfidf_matcher:
         logger.info("TFIDF vectorization")
         vector = Tfidf_matcher()
@@ -160,10 +162,13 @@ if __name__ == "__main__":
             rows = csv.reader(file, delimiter='\t')
             next(rows) # skip header
             pool_args = [(row, model) for row in rows]
+        # Parallel processing
         with Pool(4) as pool:
             results = pool.starmap(parallel, pool_args)
+        # Save the results and score
         save_results(results, f"data/results_{args.scoring}.tsv")
         results = pd.read_csv(f"data/results_{args.scoring}.tsv", sep="\t")
+        # Log message of completion
         logger.info(f"{model.__name__} scoring has finished")
         results["predicted"] = (results["score"] >= threshold).astype(int)
         end_time = time.time()    # Record end time
