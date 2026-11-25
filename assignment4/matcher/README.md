@@ -37,21 +37,21 @@ matcher/
 ```
 
 ### File Information
-data -> raw data downloaded from the assignment folder, additional files include the train and test sets
-matcher -> Subfolder
-main.py -> Main script to run
-old_main.py -> Old script before main was restructured to better interface
-name_matcher.py -> Contains NameMatchScorer Class and all algorithm inheriting subclasses.
-utils ->  utility functions
-parse_tsv -> Iterator to parse the tsv file
-eval.py -> Function to evaluate algorithm precision, recall and F1 score
-__init__.py ->  instructs Python to treat the folder as a package
-test_matcher -> Unit tests for each of the required algorithms
-test_names.tsv -> Simple name tests to be used for the unit tests
-setup.py -> orchestrate the correct installation of the project
-.gitignore -> Files for git to ignore
-logs.txt -> Written logs for algorithm once running
-environment.yml -> Necessary packages needed to run
+- data -> raw data downloaded from the assignment folder, additional files include the train and test sets
+- matcher -> Subfolder
+- main.py -> Main script to run
+- old_main.py -> Old script before main was restructured to better interface
+- name_matcher.py -> Contains NameMatchScorer Class and all algorithm inheriting subclasses.
+- utils ->  utility functions
+- parse_tsv -> Iterator to parse the tsv file
+- eval.py -> Function to evaluate algorithm precision, recall and F1 score
+- __init__.py ->  instructs Python to treat the folder as a package
+- test_matcher -> Unit tests for each of the required algorithms
+- test_names.tsv -> Simple name tests to be used for the unit tests
+- setup.py -> orchestrate the correct installation of the project
+- .gitignore -> Files for git to ignore
+- logs.txt -> Written logs for algorithm once running
+- environment.yml -> Necessary packages needed to run
 
 ### Installation
 Set up conda environment using the environment.yml file.
