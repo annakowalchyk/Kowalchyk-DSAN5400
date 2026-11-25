@@ -2,7 +2,7 @@
 |-------------------------------|---------------|------------|---------|
 |                               | **Precision** | **Recall** | **F-1** |
 | **Exact Match**               | 1.0           | 0.25       | 0.40    |
-| **Jaccard Similarity (0.50)** | 0.0061        | 0.80       | 0.0121  |
+| **Jaccard Similarity (0.50)** | 0.0045        | 1          | 0.0089  |
 | **Jaccard Similarity (0.72)** | 0.2174        | 0.625      | 0.3226  |
 | **Levenshtein (0.68)**        | 0.5385        | 0.875      | 0.6667  |
 | **Cosine Similarity (0.57)**  | 0.24          | 0.75       | 0.3636  |
@@ -26,7 +26,7 @@ Recall: 0.625
 
 F1: 0.32
 
-In comparison to the 0.50 threshold, precision has improved by nearly 0.20 while recall has decreased by approximately 0.175. The F1 score has increased overall which is a positive sign of the model improving.
+In comparison to the 0.50 threshold, precision has improved by nearly 0.20 while recall has decreased by approximately 0.375. The F1 score has increased overall which is a positive sign of the model improving.
 
 \(F\)
 

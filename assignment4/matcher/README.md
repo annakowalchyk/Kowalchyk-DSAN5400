@@ -1,5 +1,5 @@
 ## Name Matching
-This code completes the task of Fuzzy Name Matching using various algorithms to produce a score ranging from 0 to 1 describing similarity of two names. Exact matches receive a score of 1 while no matching characteristics receive a score of 0. Exact Match, Jaccard Similarity, Levenshtein, Cosine Similarity and Jaro-Winkler algorithms are all evaluated and compared using precision, recall and accuracy. Thresholds are determined based on the intersection of precision and recall to balance the tradeoff. 
+This code completes the task of Fuzzy Name Matching using various algorithms to produce a score ranging from 0 to 1 describing similarity of two names. Exact matches receive a score of 1 while no matching characteristics receive a score of 0. Exact Match, Jaccard Similarity, Levenshtein, Cosine Similarity and Jaro-Winkler algorithms are all evaluated and compared using precision, recall and F1. Thresholds are determined based on the intersection of precision and recall to balance the tradeoff. 
 
 ### Coding Structure Tree
 matcher/ 

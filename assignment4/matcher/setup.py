@@ -20,5 +20,5 @@ setuptools.setup(
         'Levenshtein',
         'jarowinkler'
     ],
-    extras_requres={"dev": ["pytest", "flake8", "autopep8"]}, 
+    extras_requires={"dev": ["pytest", "flake8", "autopep8"]}, 
 ) 
